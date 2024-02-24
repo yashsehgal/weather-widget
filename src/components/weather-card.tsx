@@ -27,7 +27,7 @@ export default function WeatherCard() {
     try {
       const data = await fetchWeatherByLocation(location);
 
-      if (data === 'error') {
+      if (data === null) {
         dispatch(setError('Error fetching weather data.'));
       } else {
         dispatch(setWeatherData(data));
