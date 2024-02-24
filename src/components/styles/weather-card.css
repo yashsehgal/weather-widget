@@ -4,8 +4,12 @@
   border-radius: 2.4rem;
   background-color: black;
   transition: all 0.2s;
-  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  box-shadow:
+    0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1);
   position: relative;
+  color: white;
+  padding: 1.2rem;
 }
 
 button.edit-location {
@@ -21,8 +25,7 @@ button.edit-location {
   border: none;
   position: absolute;
   bottom: 1rem;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 1rem;
   cursor: pointer;
 }
 
@@ -33,4 +36,37 @@ button.edit-location:hover {
 
 button.edit-location-cancel {
   background-color: #ef4444;
+}
+
+img.weather-icon {
+  background-color: white;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+}
+
+.weather-icon-wind-direction-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.location {
+  font-size: 24px;
+  line-height: 0px;
+  font-weight: 500;
+}
+
+.weather-stats-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.cloud-stats,
+.wind-direction {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  gap: 0.4rem;
 }
