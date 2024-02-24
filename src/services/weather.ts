@@ -2,8 +2,8 @@ import { WEATHER_API_KEY, WEATHER_URL } from '../common/env';
 
 export async function fetchWeatherByLocation(
   location: string,
-): Promise<WeatherType | 'error'> {
-  if (!location) return 'error';
+): Promise<WeatherType | null> {
+  if (!location) return null;
 
   try {
     const response = await fetch(
@@ -28,6 +28,6 @@ export async function fetchWeatherByLocation(
       location,
       error,
     );
-    return 'error';
+    return null;
   }
 }

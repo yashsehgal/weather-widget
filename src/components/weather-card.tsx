@@ -88,6 +88,7 @@ export default function WeatherCard() {
             label="Location for Weather"
             placeholder="Select a location"
             data={LOCATIONS}
+            defaultValue={weatherData.location}
             searchable
           />
           <Button onClick={close}>Save location</Button>
