@@ -1,0 +1,11 @@
+.widget-wrapper {
+  width: 200px;
+  height: 200px;
+  border-radius: 2.4rem;
+  background-color: #f4f4f4;
+  box-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+}
+
+.widget-wrapper > div:hover {
+  scale: 90%;
+}
