@@ -19,7 +19,7 @@ export default function WeatherCard() {
   const dispatch = useDispatch();
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-expect-error
-  const weatherData: WeatherType | null = useSelector((state) => state.weather.weatherData);
+  const weatherData = useSelector((state) => state.weather.weatherData);
 
   const handleLocationChange = async (location: string) => {
     dispatch(setLocation(location));
@@ -38,7 +38,7 @@ export default function WeatherCard() {
     }
   };
 
-  if (!weatherData) {
+  if (weatherData) {
     return (
       <>
         <div
@@ -101,6 +101,6 @@ export default function WeatherCard() {
       </>
     );
   } else {
-    return <>Loading...</>
+    return <>Loading...</>;
   }
 }
