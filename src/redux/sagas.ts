@@ -1,4 +1,4 @@
-import { put, takeEvery, call, delay } from 'redux-saga/effects';
+import { put, takeEvery, call, delay, fork } from 'redux-saga/effects';
 import { fetchWeatherByLocation } from '../services/weather';
 import { setWeatherData, setError, setLocation } from './slice';
 import { select } from 'redux-saga/effects';
@@ -39,6 +39,6 @@ function* updateWeatherDataPeriodically(): Generator<unknown, void, unknown> {
 }
 
 export default function* rootSaga(): Generator<unknown, void, unknown> {
-  yield watchFetchWeatherData();
-  yield updateWeatherDataPeriodically();
+  yield fork(watchFetchWeatherData);
+  yield fork(updateWeatherDataPeriodically);
 }
