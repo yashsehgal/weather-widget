@@ -41,9 +41,10 @@ export default function WeatherCard() {
   return (
     <>
       <div
-        className="weather-card"
+        className={`weather-card ${weatherData.cloud > 10 && "weather-cloud-bg"}`}
         onMouseEnter={() => setHasMouseOver(true)}
-        onMouseLeave={() => setHasMouseOver(false)}>
+        onMouseLeave={() => setHasMouseOver(false)}
+      >
         {weatherData && (
           <div className="location-weather-details-wrapper">
             <div className="weather-icon-wind-direction-wrapper">
