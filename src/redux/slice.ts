@@ -1,7 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { LOCATIONS } from '../common/constants';
 import { fetchWeatherByLocation } from '../services/weather';
-// import { fetchWeatherByLocation } from '../services/weather';
 
 interface WeatherState {
   selectedLocation: string | null;

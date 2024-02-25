@@ -1,10 +1,11 @@
 import { combineReducers } from 'redux';
 import weatherReducer from './slice';
 
-const rootReducer = combineReducers({
-  weather: weatherReducer,
-});
+const createRootReducer = () =>
+  combineReducers({
+    weather: weatherReducer,
+  });
 
-export type RootState = ReturnType<typeof rootReducer>;
+export type RootState = ReturnType<typeof createRootReducer>;
 
-export default rootReducer;
+export default createRootReducer;
