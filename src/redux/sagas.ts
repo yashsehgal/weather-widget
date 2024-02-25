@@ -34,7 +34,7 @@ function* updateWeatherDataPeriodically(): Generator<unknown, void, unknown> {
       (state) => state.weather.selectedLocation,
     );
     yield put(setLocation(selectedLocation as string));
-    yield delay(15 * 60 * 10);
+    yield delay(15 * 60 * 1000);
   }
 }
 

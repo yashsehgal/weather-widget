@@ -43,7 +43,10 @@ export default function WeatherCard() {
       <div
         className={`weather-card ${weatherData.cloud > 10 && 'weather-cloud-bg'}`}
         onMouseEnter={() => setHasMouseOver(true)}
-        onMouseLeave={() => setHasMouseOver(false)}>
+        onMouseLeave={() => setHasMouseOver(false)}
+        style={{
+          backgroundColor: weatherData.humidity > 20 ? '#d97706' : '#2563eb',
+        }}>
         {weatherData && (
           <div className="location-weather-details-wrapper">
             <div className="weather-icon-wind-direction-wrapper">

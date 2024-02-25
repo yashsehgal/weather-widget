@@ -8,7 +8,7 @@ const sagaMiddleware = createSagaMiddleware();
 const store = configureStore({
   reducer: createRootReducer(),
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware({ thunk: false }).concat(sagaMiddleware),
+    getDefaultMiddleware().concat(sagaMiddleware),
 });
 
 sagaMiddleware.run(rootSaga);
