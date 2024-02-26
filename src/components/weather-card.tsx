@@ -61,6 +61,7 @@ export default function WeatherCard() {
                   {weatherData.windDirection}
                 </span>
               </div>
+              <h3 className="temp">{weatherData.temp}℃</h3>
               <p className="location">{weatherData.location}</p>
               <div className="weather-stats-wrapper">
                 <span className="humidity-stats">

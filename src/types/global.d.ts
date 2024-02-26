@@ -3,6 +3,7 @@ declare type WeatherType = {
   humidity: number;
   cloud: number;
   windDirection: string;
+  temp: number;
   condition: {
     text: string;
     icon: string;
